@@ -1,0 +1,24 @@
+extends layout
+
+block resultatrapport
+    div.container
+        h1.head Rapportera röster
+        form#form
+            select#kyrkor
+                option(value="Välj kyrka", selected="true", disabled="true") Välj kyrka
+                option(value="Vasakyrkan") Vasakyrkan
+                option(value="Masthuggskyrkan") Masthuggskyrkan
+                option(value="Gårdstenskyrkan") Gårdstenskyrkan
+                option(value="Kortedala kyrka") Kortedala kyrka
+            select#partier
+                option(value="Välj parti", selected="true", disabled="true") Välj parti
+                option(value="Arbetarepartiet - Socialdemokraterna") Arbetarepartiet - Socialdemokraterna
+                option(value="Borgerligt alternativ") Borgerligt alternativ
+                option(value="Centerpartiet") Centerpartiet
+                option(value="Fria liberaler i Svenska kyrkan FiSK") Fria liberaler i Svenska kyrkan FiSK
+                option(value="Övriga") Övriga
+            input#votes(placeholder="Antal röster")
+            button Skicka in
+block scripts
+    script(src="/socket.io/socket.io.js")
+    script(src="/js/rapport.js")

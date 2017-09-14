@@ -1,0 +1,12 @@
+extends layout
+
+block resultat
+    div.container
+        h1.head Valrapport
+        h3 Inrapporterade resultat:
+        ul#ullist
+
+
+block scripts
+    script(src="/socket.io/socket.io.js")
+    script(src="/js/resultat.js")
